@@ -321,6 +321,8 @@ public class WeatherActivity extends AppCompatActivity {
         Log.d("runSK", weather.sk.humidity);
         Log.d("runToday", weather.today.temperature);
 
+        tvCity.setText(weather.today.city);
+
         /**
          for (Future future : weather.futureList) {
 
@@ -337,8 +339,6 @@ public class WeatherActivity extends AppCompatActivity {
 
          }
          **/
-        ArrayList<String> xValues1 = new ArrayList<String>();
-        ArrayList<String> xValues2 = new ArrayList<String>();
         for (int i = 0; i < 6; i++) {
             Future a = weather.futureList.get(i);
             String b = a.temperature;
@@ -350,21 +350,7 @@ public class WeatherActivity extends AppCompatActivity {
             int ymax = Integer.parseInt(max);
             int ymin = Integer.parseInt(min);
             //Log.d("runIntMax", String.valueOf());
-            list.add(new Entry(ymax, i));
-            list2.add(new Entry(ymin, i));
-            xValues1.add(i + "");
-            xValues2.add(i + "");
         }
-        set = new LineDataSet(list, "weatherHigh");
-        set2 = new LineDataSet(list2, "weatherLow");
-        setLine(set, set2);
-        //yingcang();
-        ArrayList<LineDataSet> dataSets = new ArrayList<LineDataSet>();
-        dataSets.add(set);
-        dataSets.add(set2);
-        LineData lineData = new LineData(xValues1, dataSets);
-        lineChart.setData(lineData);
-
 
     }
 
