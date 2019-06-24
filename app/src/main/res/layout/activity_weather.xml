@@ -1,0 +1,640 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".WeatherActivity">
+
+    <include layout="@layout/title" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/weather_Layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+
+                android:id="@+id/linlay_weather_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_city"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="北京"
+                    android:textSize="28sp" />
+
+                <TextView
+                    android:id="@+id/tv_data"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="20dp"
+                    android:text="2019年5月23日"
+                    android:textSize="28sp" />
+
+                <TextView
+                    android:id="@+id/tv_week"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="20dp"
+                    android:text="星期四"
+                    android:textSize="28sp" />
+
+                <TextView
+                    android:id="@+id/tv_wendu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="30dp"
+                    android:text="18度"
+                    android:textSize="28sp" />
+
+                <TextView
+                    android:id="@+id/tv_weather_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="30dp"
+                    android:text="晴"
+                    android:textSize="28sp" />
+
+                <ImageView
+                    android:id="@+id/img_weather_type"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="30dp"
+                    android:src="@drawable/vector_drawable_icon_qing" />
+            </LinearLayout>
+
+
+            <TableLayout
+                android:id="@+id/table"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/linlay_weather_text"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:background="#000">
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tv_day1"
+                        android:layout_width="120dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="0.5dp"
+                        android:layout_marginTop="0.5dp"
+                        android:layout_marginRight="0.5dp"
+                        android:background="#fff"
+                        android:gravity="center"
+                        android:paddingRight="0.8dp"
+                        android:text="6月21号"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/tv_day2"
+                        android:layout_width="120dp"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="0.5dp"
+                        android:layout_marginRight="0.5dp"
+                        android:background="#fff"
+                        android:gravity="center"
+                        android:text="6月22号"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/tv_day3"
+                        android:layout_width="120dp"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="0.5dp"
+                        android:layout_marginRight="0.5dp"
+                        android:background="#fff"
+                        android:gravity="center"
+                        android:text="6月23号"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/tv_day4"
+                        android:layout_width="120dp"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="0.5dp"
+                        android:layout_marginRight="0.5dp"
+                        android:background="#fff"
+                        android:gravity="center"
+                        android:text="6月24号"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/tv_day5"
+                        android:layout_width="120dp"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="0.5dp"
+                        android:layout_marginRight="0.5dp"
+                        android:background="#fff"
+                        android:gravity="center"
+                        android:text="6月25号"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/tv_day6"
+                        android:layout_width="120dp"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="0.5dp"
+                        android:layout_marginRight="0.5dp"
+                        android:background="#fff"
+                        android:gravity="center"
+                        android:text="6月26号"
+                        android:textSize="20sp" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tv_week1"
+                        android:layout_width="120dp"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="0.5dp"
+                        android:layout_marginTop="0.5dp"
+                        android:layout_marginRight="0.5dp"
+                        android:background="#fff"
+                        android:gravity="center"
+                        android:text="今日(周四)"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/tv_week2"
+                        android:layout_width="120dp"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="0.5dp"
+                        android:layout_marginRight="0.5dp"
+                        android:background="#fff"
+                        android:gravity="center"
+                        android:text="周五"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/tv_week3"
+                        android:layout_width="120dp"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="0.5dp"
+                        android:layout_marginRight="0.5dp"
+                        android:background="#fff"
+                        android:gravity="center"
+                        android:text="周六"
+                        android:textSize="20sp" />
+
+
+                    <TextView
+                        android:id="@+id/tv_week4"
+                        android:layout_width="120dp"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="0.5dp"
+                        android:layout_marginRight="0.5dp"
+                        android:background="#fff"
+                        android:gravity="center"
+                        android:text="周天"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/tv_week5"
+                        android:layout_width="120dp"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="0.5dp"
+                        android:layout_marginRight="0.5dp"
+                        android:background="#fff"
+                        android:gravity="center"
+                        android:text="周一"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/tv_week6"
+                        android:layout_width="120dp"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="0.5dp"
+                        android:layout_marginRight="0.5dp"
+                        android:background="#fff"
+                        android:gravity="center"
+                        android:text="周二"
+                        android:textSize="20sp" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tv_weather_type1"
+                        android:layout_width="120dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="0.5dp"
+                        android:layout_marginTop="0.5dp"
+                        android:layout_marginRight="0.5dp"
+                        android:background="#fff"
+                        android:gravity="center"
+                        android:text="晴"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/tv_weather_type2"
+                        android:layout_width="120dp"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="0.5dp"
+                        android:layout_marginRight="0.5dp"
+                        android:background="#fff"
+                        android:gravity="center"
+                        android:text="小雨"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/tv_weather_type3"
+                        android:layout_width="120dp"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="0.5dp"
+                        android:layout_marginRight="0.5dp"
+                        android:background="#fff"
+                        android:gravity="center"
+                        android:text="阴"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/tv_weather_type4"
+                        android:layout_width="120dp"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="0.5dp"
+                        android:layout_marginRight="0.5dp"
+                        android:background="#fff"
+                        android:gravity="center"
+                        android:text="雷阵雨"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/tv_weather_type5"
+                        android:layout_width="120dp"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="0.5dp"
+                        android:layout_marginRight="0.5dp"
+                        android:background="#fff"
+                        android:gravity="center"
+                        android:text="晴"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/tv_weather_type6"
+                        android:layout_width="120dp"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="0.5dp"
+                        android:layout_marginRight="0.5dp"
+                        android:background="#fff"
+                        android:gravity="center"
+                        android:text="多云"
+                        android:textSize="20sp" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/img_weather_type1"
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:layout_margin="0.5dp"
+                        android:background="#fff"
+                        android:padding="30dp"
+                        android:src="@drawable/vector_drawable_icon_qing" />
+
+                    <ImageView
+                        android:id="@+id/img_weather_type2"
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:layout_marginTop="0.5dp"
+                        android:layout_marginRight="0.5dp"
+                        android:layout_marginBottom="0.5dp"
+                        android:background="#fff"
+                        android:padding="30dp"
+                        android:src="@drawable/vector_drawable_icon_xiaoyu" />
+
+                    <ImageView
+                        android:id="@+id/img_weather_type3"
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:layout_marginTop="0.5dp"
+                        android:layout_marginRight="0.5dp"
+                        android:layout_marginBottom="0.5dp"
+                        android:background="#fff"
+                        android:padding="30dp"
+                        android:src="@drawable/vector_drawable_icon_yin" />
+
+                    <ImageView
+                        android:id="@+id/img_weather_type4"
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:layout_marginTop="0.5dp"
+                        android:layout_marginRight="0.5dp"
+                        android:layout_marginBottom="0.5dp"
+                        android:background="#fff"
+                        android:padding="30dp"
+                        android:src="@drawable/vector_drawable_icon_leiyu" />
+
+                    <ImageView
+                        android:id="@+id/img_weather_type5"
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:layout_marginTop="0.5dp"
+                        android:layout_marginRight="0.5dp"
+                        android:layout_marginBottom="0.5dp"
+                        android:background="#fff"
+                        android:padding="30dp"
+                        android:src="@drawable/vector_drawable_icon_qing" />
+
+                    <ImageView
+                        android:id="@+id/img_weather_type6"
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:layout_marginTop="0.5dp"
+                        android:layout_marginRight="0.5dp"
+                        android:layout_marginBottom="0.5dp"
+                        android:background="#fff"
+                        android:padding="30dp"
+                        android:src="@drawable/vector_drawable_icon_duoyun" />
+
+                </TableRow>
+
+
+            </TableLayout>
+
+
+            <com.github.mikephil.charting.charts.LineChart
+                android:id="@+id/chart_weather"
+                android:layout_width="720dp"
+                android:layout_height="200dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp" />
+
+            <TableLayout
+                android:id="@+id/table2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="15dp"
+                android:background="#000">
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="120dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="0.5dp"
+                        android:layout_marginTop="0.5dp"
+                        android:layout_marginRight="0.5dp"
+                        android:background="#0098FE"
+                        android:gravity="center"
+                        android:paddingRight="0.8dp"
+                        android:text="紫外线指数"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:layout_width="120dp"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="0.5dp"
+                        android:layout_marginRight="0.5dp"
+                        android:background="#0098FE"
+                        android:gravity="center"
+                        android:text="空气污染指数"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:layout_width="120dp"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="0.5dp"
+                        android:layout_marginRight="0.5dp"
+                        android:background="#0098FE"
+                        android:gravity="center"
+                        android:text="运动指数"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:layout_width="120dp"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="0.5dp"
+                        android:layout_marginRight="0.5dp"
+                        android:background="#0098FE"
+                        android:gravity="center"
+                        android:text="穿衣指数"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:layout_width="120dp"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="0.5dp"
+                        android:layout_marginRight="0.5dp"
+                        android:background="#0098FE"
+                        android:gravity="center"
+                        android:text="感冒指数"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:layout_width="120dp"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="0.5dp"
+                        android:layout_marginRight="0.5dp"
+                        android:background="#0098FE"
+                        android:gravity="center"
+                        android:text="洗车指数"
+                        android:textSize="20sp" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tv_uv_index"
+                        android:layout_width="120dp"
+                        android:layout_height="100dp"
+                        android:layout_marginLeft="0.5dp"
+                        android:layout_marginTop="0.5dp"
+                        android:layout_marginRight="0.5dp"
+                        android:background="#fff"
+                        android:drawableLeft="@drawable/vector_drawable_icon_uv"
+                        android:gravity="center"
+                        android:text="3000"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/tv_air_index"
+                        android:layout_width="120dp"
+                        android:layout_height="100dp"
+                        android:layout_marginTop="0.5dp"
+                        android:layout_marginRight="0.5dp"
+                        android:background="#fff"
+                        android:drawableLeft="@drawable/vector_drawable_icon_air"
+                        android:gravity="center"
+                        android:text="80"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/tv_sport_index"
+                        android:layout_width="120dp"
+                        android:layout_height="100dp"
+                        android:layout_marginTop="0.5dp"
+                        android:layout_marginRight="0.5dp"
+                        android:background="#fff"
+                        android:drawableLeft="@drawable/vector_drawable_icon_sport"
+                        android:gravity="center"
+                        android:text="2000"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/tv_clothing_index"
+                        android:layout_width="120dp"
+                        android:layout_height="100dp"
+                        android:layout_marginTop="0.5dp"
+                        android:layout_marginRight="0.5dp"
+                        android:background="#fff"
+                        android:drawableLeft="@drawable/vector_drawable_icon_clothing"
+                        android:gravity="center"
+                        android:text="20"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/tv_flu_index"
+                        android:layout_width="120dp"
+                        android:layout_height="100dp"
+                        android:layout_marginTop="0.5dp"
+                        android:layout_marginRight="0.5dp"
+                        android:background="#fff"
+                        android:drawableLeft="@drawable/vector_drawable_icon_flu"
+                        android:gravity="center"
+                        android:text="87"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/tv_car_index"
+                        android:layout_width="120dp"
+                        android:layout_height="100dp"
+                        android:layout_marginTop="0.5dp"
+                        android:layout_marginRight="0.5dp"
+                        android:background="#fff"
+                        android:drawableLeft="@drawable/vector_drawable_icon_car"
+                        android:gravity="center"
+                        android:textSize="20sp" />
+
+                </TableRow>
+
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tv_uv_type"
+                        android:layout_width="120dp"
+                        android:layout_height="30dp"
+                        android:layout_margin="0.5dp"
+                        android:background="#CBFD01"
+                        android:gravity="center"
+                        android:text="强"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/tv_air_type"
+                        android:layout_width="120dp"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="0.5dp"
+                        android:layout_marginRight="0.5dp"
+                        android:layout_marginBottom="0.5dp"
+                        android:background="#CBFD01"
+                        android:gravity="center"
+                        android:text="良"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/tv_sport_type"
+                        android:layout_width="120dp"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="0.5dp"
+                        android:layout_marginRight="0.5dp"
+                        android:layout_marginBottom="0.5dp"
+                        android:background="#CBFD01"
+                        android:gravity="center"
+                        android:text="适宜"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/tv_clothing_type"
+                        android:layout_width="120dp"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="0.5dp"
+                        android:layout_marginRight="0.5dp"
+                        android:layout_marginBottom="0.5dp"
+                        android:background="#CBFD01"
+                        android:gravity="center"
+                        android:text="舒适"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/tv_flu_type"
+                        android:layout_width="120dp"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="0.5dp"
+                        android:layout_marginRight="0.5dp"
+                        android:layout_marginBottom="0.5dp"
+                        android:background="#CBFD01"
+                        android:gravity="center"
+                        android:text="少发"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/tv_car_type"
+                        android:layout_width="120dp"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="0.5dp"
+                        android:layout_marginRight="0.5dp"
+                        android:layout_marginBottom="0.5dp"
+                        android:background="#CBFD01"
+                        android:gravity="center"
+                        android:text="不适宜"
+                        android:textSize="20sp" />
+
+                </TableRow>
+
+
+            </TableLayout>
+
+
+        </LinearLayout>
+
+
+    </android.support.v4.widget.NestedScrollView>
+
+
+</LinearLayout>

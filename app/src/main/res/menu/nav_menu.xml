@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@mipmap/icon_home"
+            android:title="主页" />
+        <item
+            android:id="@+id/nav_weather"
+            android:icon="@mipmap/icon_flower"
+            android:title="天气预报" />
+
+    </group>
+    <item android:title="软件设置与帮助">
+        <menu>
+            <item
+                android:id="@+id/nav_setting"
+                android:icon="@mipmap/icon_setting"
+                android:title="设置" />
+            <item
+                android:id="@+id/nav_about"
+                android:icon="@mipmap/icon_about"
+                android:title="关于" />
+        </menu>
+    </item>
+</menu>
