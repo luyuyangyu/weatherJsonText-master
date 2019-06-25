@@ -9,7 +9,9 @@
 
     <include layout="@layout/title" />
 
-    <android.support.v4.widget.NestedScrollView
+
+
+    <ScrollView
         android:id="@+id/weather_Layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -17,6 +19,7 @@
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
         <LinearLayout
+
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
@@ -79,8 +82,7 @@
                     android:layout_width="45dp"
                     android:layout_height="45dp"
                     android:layout_gravity="center"
-                    android:layout_marginLeft="30dp"
-                    android:src="@drawable/vector_drawable_icon_qing" />
+                    android:layout_marginLeft="30dp" />
             </LinearLayout>
 
 
@@ -634,7 +636,7 @@
         </LinearLayout>
 
 
-    </android.support.v4.widget.NestedScrollView>
+    </ScrollView>
 
 
 </LinearLayout>
